@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>P/Invoke API</title>
+
+    <link rel="stylesheet" href="./resources/style.css">
+    <script src="./resources/script.js"></script>
+    <script src="./resources/actionBtn.js"></script>
+
+    <script src="https://md-block.verou.me/md-block.js"></script>
+    <script src="./resources/markdown/marked-element.js"></script>
+
+    <script type="module">
+        import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+        document.getElementById('markdown-content').innerHTML =
+            marked.parse(document.getElementById('markdown-content').innerText);
+
+    </script>
+
+    
+    <!--Tô màu sáng -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <!-- Marked để chuyển đổi Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- <script type="module">
+        document.getElementById("highlight-content").innerHTML = marked.parse(document.getElementById('highlight-content').innerText);
+        // Làm nổi bật mã code
+        hljs.highlightAll();
+    </script> -->
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            hljs.highlightAll(); // Làm nổi bật mã code khi trang tải
+        });
+    </script> -->
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="NAV">
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <input class="searchBox" type="text" id="menuSearch" placeholder="Tìm kiếm..."
+                            onkeyup="filterMenu()" />
+                    </li>
+                    <li><a href="#" data-group="home">Trang Chủ</a></li>
+                    <li>
+                        <a href="#" data-group="features" onclick="toggleSubmenu('features')">Tính Năng</a>
+                        <ul id="features" class="submenu">
+                            <li><a href="#" data-group="features">Tính Năng 1</a></li>
+                            <li><a href="#" data-group="features">Tính Năng 2</a></li>
+                            <li><a href="#" data-group="features">Tính Năng 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <details>
+                            <summary style="display: flex; cursor: pointer; user-select: none;">
+                                <div>Tính Năng Z</div>
+                            </summary>
+                            <ul style="padding-left: 10px;">
+                                <button class="button"
+                                    onclick="readCode('Network_Packet_Traffic/master/Network_Packet_Traffic/Form1.cs')"
+                                    data-group="features">
+                                    Tính Năng Z1
+                                </button>
+                            
+                            </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <a href="#" data-group="services" onclick="toggleSubmenu('services')">Dịch Vụ</a>
+                        <ul id="services" class="submenu">
+                            <li><a href="#" data-group="services">Dịch Vụ 1</a></li>
+                            <li><a href="#" data-group="services">Dịch Vụ 2</a></li>
+                            <li><a href="#" data-group="services">Dịch Vụ 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" data-group="contact">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="contain_content">
+                <h1>Xin Chào!</h1>
+                <p>Đây là nội dung chính của bạn.</p>
+
+
+                <!-- Box chứa code -->
+                <div class="code-manager" style="position: relative; border: 1px solid #ccc;">
+                    <button id="copybut" class="copy-btn" onclick="copyToClipboard()"
+                        style="position: absolute; top: 10px; right: 10px;">Sap chép</button>
+
+                    <div class="code-container">
+                        <pre style="background: white;">
+                            <code class="language-csharp" id="code-block">
+                            </code>
+                        </pre>
+                      
+                        <script>hljs.highlightAll();</script>
+                
+                    </div>
+                 
+                     
+                </div>
+
+
+
+            </div>
+        </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,220 @@
+body {
+    background-color: #f5f5f5;
+    /* Màu nền */
+    /*background-image: url('./background/back1.jpg');*/
+    background-repeat: no-repeat;
+    color: #333;
+    /* Màu chữ */
+    font-family: Arial, sans-serif;
+    /* Kiểu chữ */
+    display: flex;
+    justify-content: center;
+    /* Đảm bảo container nằm ở giữa */
+    align-items: center;
+    /* Đảm bảo container nằm ở trung tâm */
+    height: 100vh;
+    /* Chiều cao toàn màn hình */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* Đảm bảo container nằm ở giữa */
+    align-items: center;
+    /* Đảm bảo container ở trung tâm */
+    height: 80dvh;
+    /* Chiều cao 80% so với cửa sổ web */
+    width: 90%;
+    /* Chiều rộng 90% so với cửa sổ web */
+    /*border: 1px solid #ddd; /* Thêm viền để rõ ràng */
+    border-radius: 10px;
+    /* Bo góc */
+}
+
+.searchBox {
+    background: linear-gradient(135deg, #f3f3f3, #e2e2e2);
+    /* Hiệu ứng gradient */
+    border: 1px solid #888;
+    /* Viền dày hơn */
+    padding: 15px;
+    /* Tăng khoảng cách */
+    margin: 0px;
+    border-radius: 5px;
+    /* Bo góc nhiều hơn */
+    width: 100px;
+    /* Thu hẹp chiều rộng */
+    transition: all 0.3s ease;
+    /* Hiệu ứng chuyển động mượt mà */
+    margin-bottom: 12px;
+}
+
+.searchBox:hover {
+    background-color: #ddd;
+    /* Thay đổi màu khi di chuột */
+    border-color: #555;
+    /* Thay đổi màu viền khi di chuột */
+}
+
+.sidebar input {
+    padding: 10px;
+    width: 90%;
+    /* Đảm bảo ô tìm kiếm vừa chiều ngang của sidebar */
+}
+
+.sidebar {
+    height: 90%;
+}
+
+.NAV {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+    /* Chiều rộng của menu bên trái */
+    padding: 10px;
+    height: 100%;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar summary {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+
+}
+
+.sidebar summary:hover {
+    text-decoration: none;
+    background-color: #ddd;
+    /* Đổi màu khi di chuột qua */
+    color: #333;
+    padding: 10px;
+    display: block;
+
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+    /* Đổi màu khi di chuột qua */
+}
+
+.submenu {
+    display: none;
+    /* Ẩn theo mặc định */
+    padding-left: 0px;
+    /* Thụt đầu dòng cho các mục con */
+}
+
+.submenu li {
+    padding-left: 10px;
+    /* Thụt đầu dòng thêm */
+
+}
+
+
+.content {
+    padding: 10px;
+    flex-grow: 1;
+    /* Cho phép nội dung mở rộng */
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    height: 100%;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+/* Nút copy */
+.copy-btn {
+    position: absolute;
+    /* Đặt vị trí tuyệt đối */
+    top: 10px;
+    /* Định vị nút ở góc trên */
+    right: 10px;
+    /* Bên phải */
+    background-color: #4CAF50;
+    /* Màu nền xanh lá */
+    color: white;
+    /* Màu chữ trắng */
+    border: none;
+    /* Không có đường viền */
+    border-radius: 4px;
+    /* Bo góc nút */
+    padding: 5px 10px;
+    /* Khoảng cách nội dung */
+    cursor: pointer;
+    /* Con trỏ dạng chỉ trỏ */
+    transition: all 0.3s;
+    /* Hiệu ứng chuyển tiếp */
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+    /* Đổi màu nền khi hover */
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+    /* Giảm kích thước khi bấm */
+}
+
+.contain_content {
+    padding: 20px;
+
+}
+
+.box_contain_code {
+    padding: 0px;
+}
+
+.code-container {
+    padding: 5px;
+    padding-top: 30px;
+}
+
+
+.code-layout {
+    white-space: pre-wrap;
+    word-wrap: normal;
+}
+
+/* Kiểu bút cơ bản */
+.button {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Tạo hiệu ứng chuyển động mượt */
+}
+
+/* Hiệu ứng khi hover */
+.button:hover {
+    background-color: rgb(236, 235, 235);
+    /* Đổi màu khi hover */
+    color: #444;
+    transform: scale(1.1);
+    /* Phóng to bút khi hover */
+}
+
+/* Hiệu ứng khi nhấn */
+.button:active {
+    background-color: rgb(255, 255, 255);
+}
+
